@@ -41,6 +41,7 @@ public class ballmovdn : MonoBehaviour {
 
         ballup = (GameObject)Instantiate(ballInitup, ballposup, Quaternion.identity);
         float randforce = -5f;
+       
         if(touchpad.score>10)
         {
             randforce = -6f;
@@ -70,7 +71,8 @@ public class ballmovdn : MonoBehaviour {
         {
             randforce = -21f;
         }
-        ballup.GetComponent<Rigidbody>().AddForce(0, randforce-3f, 0, ForceMode.Impulse); print("ball");
+        
+        ballup.GetComponent<Rigidbody>().AddForce(0, randforce-5f, 0, ForceMode.Impulse); print("ball");
 
     }
 
